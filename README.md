@@ -1,20 +1,13 @@
-# e2e-orbitDB-chat-app-prototype
-This is a simple example application demonstrating how to
-use [OrbitDB](https://github.com/orbitdb/orbit-db) and [IPFS](https://ipfs.io/)
-to create a chat application.
+# signed-proof-chat
+This is a rapid prototype app based on [this OrbitDB chat example](https://github.com/christroutner/e2e-orbitDB-chat-app-prototype).
 
-The example is composed of two node.js JavaScript files.
-A [master-node](./ChatMaster-Node/master-node.js) is started with a direct connection
-to the internet (no firewall). Any number
-of [client-nodes](./ChatClient-Node/client.js) can be started to join the 'chat room'.
-Each client needs to set its `MASTER_MULTIADDR` and `DB_ADDRESS` in order to connect.
+The purpose of this app is to create two client nodes that communicate with one another:
 
-This example will be improved upon in order to build a full-featured,
-browser-based, end-to-end (e2e) encrypted chat application.
+- The first node will broadcast a JSON object as a message. It will also sign the message with its BCH wallet.
 
-The encryption layer is still being explored, but unless a better solution is
-found, the [cli-encrypt](https://www.npmjs.com/package/cli-encrypt) library
-can be used.
+- The second node will read the message and verify the signature. It will also verify the address that signed the message is in position of 10 PSF tokens.
+
+The app uses [slp-cli-wallet](https://github.com/christroutner/slp-cli-wallet) for BCH wallet functionality and message signing.
 
 ## License
 [MIT](LICENSE.md)

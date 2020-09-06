@@ -2,7 +2,7 @@
 
 // CUSTOMIZE THESE VARIABLES
 const MASTER_MULTIADDR = "/ip4/127.0.0.1/tcp/5004/p2p/QmT8Sw1TeNRLguzcQuznycGCVeXxK6NxFBp5GsK4T4ZD1G"
-const DB_ADDRESS = "/orbitdb/zdpuAyTCPbmFJAhXhCZ8kFpTTKj42W9RdqLH6mbdqEnyXQXxc/example5343234"
+const DB_ADDRESS = "/orbitdb/zdpuAyTCPbmFJAhXhCZ8kFpTTKj42W9RdqLH6mbdqEnyXQXxc/example4444"
 
 const IPFS = require('ipfs')
 const OrbitDB = require('orbit-db')

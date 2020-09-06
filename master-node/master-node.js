@@ -1,7 +1,7 @@
 'use strict'
 
 // CUSTOMIZE THESE VARIABLES
-const DB_NAME = "example5343234"
+const DB_NAME = "example4444"
 
 const IPFS = require('ipfs')
 const OrbitDB = require('orbit-db')
@@ -118,7 +118,3 @@ const startMasterNode = async () => {
 
 
 startMasterNode()
-
-
-
-
