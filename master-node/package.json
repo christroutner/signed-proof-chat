@@ -1,0 +1,16 @@
+{
+  "name": "@chris.troutner/master-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "master-node.js",
+  "scripts": {
+    "test": "echo no tests",
+    "start": "node master-node.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ipfs": "0.48.2",
+    "orbit-db": "0.24.2"
+  }
+}
