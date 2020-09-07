@@ -4,13 +4,15 @@
   "description": "",
   "main": "client.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --timeout=30000 test/",
     "start": "node client.js"
   },
   "author": "Chris Troutner <chris.troutner@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "bchjs": "0.1.0-alpha.3",
     "ipfs": "^0.48.2",
+    "minimal-slp-wallet": "^1.4.1",
     "orbit-db": "^0.24.2"
   }
 }
