@@ -48,6 +48,20 @@ class Signing {
       throw err
     }
   }
+
+  // Verify the signature of a message was actually signed by the address.
+  verify (addr, signature, message) {
+    try {
+      let isValid = false
+
+      isValid = this.bchjs.BitcoinCash.verifyMessage(addr, signature, message)
+
+      return isValid
+    } catch (err) {
+      console.error('Error in verify()')
+      throw err
+    }
+  }
 }
 
 module.exports = Signing

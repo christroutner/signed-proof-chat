@@ -24,4 +24,19 @@ describe('#signing', () => {
       assert.isString(sig)
     })
   })
+
+  describe('#verify', () => {
+    it('should verify a message', async () => {
+      // Wait for the wallet to finish being created.
+      await uut.wallet.walletInfoPromise
+
+      const msg = 'this is a test'
+
+      const sig = uut.sign(msg)
+
+      const isValid = uut.verify(uut.bchAddr, sig, msg)
+
+      assert.equal(isValid, true)
+    })
+  })
 })
